@@ -1,21 +1,16 @@
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class InputData {
-
     public static String stringInput() {
-
         while (true) {
+            System.out.println("Введите данные: ");
             Scanner sc = new Scanner(System.in);
-            try {
-                System.out.println("Введите строку: ");
-                String str = sc.nextLine();
-                sc.close();
-                return str;
-            } catch (NoSuchElementException | InputStringException e) {
-                System.out.println(e);
+            String str = sc.nextLine();
+            if (str == ""){
+                System.out.println("Вы ничего не ввели, попробуйте еще!");
+               continue;
             }
-            sc.close();
+            return str;
         }
     }
 }

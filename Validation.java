@@ -9,13 +9,11 @@ import static java.lang.Character.isLetter;
 public class Validation {
 
     public static boolean checkingTheDate(String  str){
-
         DateFormat df = new SimpleDateFormat("dd.MM.yyyy");
         try {
             Date date = df.parse(str);
             return true;
         } catch (ParseException e) {
-//            e.printStackTrace();
             return false;
         }
     }

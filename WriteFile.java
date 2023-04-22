@@ -7,7 +7,6 @@ public class WriteFile {
         String str = "";
         for (int i = 0; i < words.length; i++){
             str = str + "<" + words[i] + ">";
-//            System.out.println(words[i]);
         }
 
         File f = new File(words[0] + ".txt");
